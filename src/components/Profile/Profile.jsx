@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Img,
   Title,
@@ -9,7 +9,6 @@ import {
   StatsName,
   Stats,
 } from './Profile.styled';
-import { Fragment } from 'react';
 import { Box } from '../Box/Box';
 
 export const Profile = ({ data }) => {
@@ -39,4 +38,8 @@ export const Profile = ({ data }) => {
       </Box>
     </>
   );
+};
+
+Profile.propTypes = {
+  data: PropTypes.object,
 };

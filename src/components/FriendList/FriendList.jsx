@@ -1,6 +1,7 @@
 import { List } from './FriendList.styled';
 import { Box } from '../Box/Box';
 import { FriendListItem } from '../FriendListItem/FriendListItem';
+import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
   return (
@@ -30,4 +31,8 @@ export const FriendList = ({ friends }) => {
       </List>
     </Box>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array,
 };

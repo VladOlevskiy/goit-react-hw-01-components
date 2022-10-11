@@ -25,6 +25,8 @@ export const Status = styled.span`
         return 'blue';
       case false:
         return 'red';
+      default:
+        return 'white';
     }
   }};
 `;

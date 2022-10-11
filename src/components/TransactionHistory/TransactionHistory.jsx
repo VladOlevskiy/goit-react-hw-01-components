@@ -7,6 +7,7 @@ import {
   TableData,
   TableHeader,
 } from './TransactionHistory.styled';
+import PropTypes from 'prop-types';
 
 export const TransactionHistory = ({ data }) => {
   return (
@@ -20,7 +21,7 @@ export const TransactionHistory = ({ data }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map(({ id, type, amount, currency, index }) => (
+          {data.map(({ id, type, amount, currency }) => (
             <TableRow key={id}>
               <TableData>{type}</TableData>
               <TableData>{amount}</TableData>
@@ -31,4 +32,12 @@ export const TransactionHistory = ({ data }) => {
       </Table>
     </Box>
   );
+};
+
+TransactionHistory.propTypes = {
+  data: PropTypes.array,
+  id: PropTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  currency: PropTypes.string,
 };

@@ -1,5 +1,6 @@
 import { Box } from '../Box/Box';
 import { Title, List, ListItem, Label, Percentage } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -33,4 +34,12 @@ export const Statistics = ({ data, title }) => {
       </Box>
     </Box>
   );
+};
+
+Statistics.propTypes = {
+  data: PropTypes.array,
+  title: PropTypes.string,
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };

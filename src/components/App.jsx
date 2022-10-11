@@ -8,8 +8,6 @@ import StatDates from '../data.json';
 import friendsData from '../friends.json';
 import transactionData from '../transactions.json';
 
-// const imageUrl = user.avatar;
-
 export const App = () => {
   return (
     <Box backgroundColor="#e5e5e5" paddingBottom="30px" paddingTop="30px">
