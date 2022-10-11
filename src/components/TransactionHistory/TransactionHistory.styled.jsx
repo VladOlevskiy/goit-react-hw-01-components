@@ -6,9 +6,6 @@ export const Table = styled.table`
   margin-left: auto;
   text-align: center;
   border-spacing: 0px;
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
 `;
 
 export const TableHead = styled.thead``;

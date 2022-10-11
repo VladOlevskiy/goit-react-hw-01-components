@@ -11,18 +11,21 @@ export const Title = styled.p`
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 18px;
+  text-align: center;
 `;
 
 export const Tag = styled.p`
   margin-bottom: 10px;
   color: #7b7e7d;
   font-size: 16px;
+  text-align: center;
 `;
 
 export const Location = styled.p`
   margin-bottom: 30px;
   color: #7b7e7d;
   font-size: 16px;
+  text-align: center;
 `;
 
 export const List = styled.ul`

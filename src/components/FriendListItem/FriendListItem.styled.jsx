@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ListItem = styled.li`
-  width: 150px;
+  width: 220px;
   display: flex;
   align-items: center;
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),

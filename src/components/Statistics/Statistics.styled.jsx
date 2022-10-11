@@ -6,6 +6,7 @@ export const Title = styled.h2`
 `;
 export const List = styled.ul`
   display: flex;
+  flex-wrap: wrap;
 `;
 export const ListItem = styled.li`
   height: 60px;
