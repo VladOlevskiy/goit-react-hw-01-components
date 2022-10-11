@@ -11,28 +11,34 @@ import {
 } from './Profile.styled';
 import { Box } from '../Box/Box';
 
-export const Profile = ({ data }) => {
+export const Profile = ({
+  avatar,
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) => {
   return (
     <>
       <Box>
-        <Img src={data.avatar}></Img>
-        <Title>{data.username}</Title>
-        <Tag>{data.tag}</Tag>
-        <Location>{data.location}</Location>
+        <Img src={avatar}></Img>
+        <Title>{username}</Title>
+        <Tag>{tag}</Tag>
+        <Location>{location}</Location>
       </Box>
       <Box width="100%" backgroundColor="#edf2f7">
         <List>
           <ListItem>
             <StatsName>Followers</StatsName>
-            <Stats>{data.stats.followers}</Stats>
+            <Stats>{followers}</Stats>
           </ListItem>
           <ListItem>
             <StatsName>Views</StatsName>
-            <Stats>{data.stats.views}</Stats>
+            <Stats>{views}</Stats>
           </ListItem>
           <ListItem>
             <StatsName>Likes</StatsName>
-            <Stats>{data.stats.likes}</Stats>
+            <Stats>{likes}</Stats>
           </ListItem>
         </List>
       </Box>
@@ -41,5 +47,13 @@ export const Profile = ({ data }) => {
 };
 
 Profile.propTypes = {
-  data: PropTypes.object,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.exact({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };

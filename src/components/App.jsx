@@ -3,10 +3,11 @@ import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
-import userDate from '../user.json';
+import User from '../user.json';
 import StatDates from '../data.json';
 import friendsData from '../friends.json';
 import transactionData from '../transactions.json';
+const { username, tag, location, avatar, stats } = User;
 
 export const App = () => {
   return (
@@ -23,7 +24,13 @@ export const App = () => {
         backgroundColor="#ffff"
         marginBottom="80px"
       >
-        <Profile data={userDate}></Profile>
+        <Profile
+          username={username}
+          tag={tag}
+          location={location}
+          avatar={avatar}
+          stats={stats}
+        ></Profile>
       </Box>
       <Statistics data={StatDates} title="Upload stats"></Statistics>
       <FriendList friends={friendsData}></FriendList>
